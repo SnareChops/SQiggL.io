@@ -1,0 +1,32 @@
+{
+  "name": "sqiggl.io",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnareChops/SQiggL.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SnareChops/SQiggL.io/issues"
+  },
+  "homepage": "https://github.com/SnareChops/SQiggL.io#readme",
+  "dependencies": {
+    "browserify": "^10.2.6",
+    "globby": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-to-json": "^1.0.1",
+    "gulp-typescript": "^2.7.8",
+    "gulp-webserver": "^0.9.1",
+    "sqiggl": "^0.1.0",
+    "through2": "^2.0.0",
+    "tsify": "^0.11.2",
+    "typescript": "^1.5.0-beta",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
