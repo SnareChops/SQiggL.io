@@ -6,19 +6,19 @@ class Router {
         $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: 'www/home.html',
+            templateUrl: 'templates/home.html',
             controller: 'HomeController',
             controllerAs: 'home'
         })
         .state('docs', {
             url: '/docs/:item?',
-            templateUrl: 'www/docs.html',
+            templateUrl: 'templates/docs.html',
             controller: 'DocsController',
             controllerAs: 'docs'
         })
         .state('srcdocs', {
             url: '/srcdocs/:item?',
-            templateUrl: 'www/srcdocs.html',
+            templateUrl: 'templates/srcdocs.html',
             controller: 'SrcDocsController',
             controllerAs: 'docs'
         });

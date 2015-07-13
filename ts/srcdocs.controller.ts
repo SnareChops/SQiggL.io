@@ -10,7 +10,7 @@ interface IDocs {
 class SrcDocsController {
     public docs: IDocs[] = [];
     constructor(public $http, public $stateParams){
-        $http.get('www/docs.json').then(response => {
+        $http.get('docs.json').then(response => {
             response.data.forEach(item => {
                 let match = item.match(/(\w*)[\\\/](\w+)(?=\.md)/);
                 let parent = match[1];

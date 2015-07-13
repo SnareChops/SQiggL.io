@@ -39,7 +39,7 @@ gulp.task('docs', function(){
     return gulp.src(['./node_modules/sqiggl/docs/**/*.md'])
     .pipe(toJson({
         filename: './docs.json',
-        strip: /^.+\/?\\?sqiggl-js\/?\\?/i
+        strip: /^.+\/?\\?sqiggl.io\/?\\?/i
     }));
 });
 
