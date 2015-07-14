@@ -114,7 +114,7 @@ One last note is that some modifiers, like `!`, have more than one identifier. T
 
 The following is a list of all combinations of current conditions/modifiers
 
-<variable> (m)=(m) <comparative> | should I use? | same as | rule
+`<variable> (m)=(m) <comparative>` | should I use? | same as | rule
 ---------------------------------|---------------|---------|-----
 `=` | yes | | true if variable is equal to the comparative
 `!=` | yes | | false if variable is equal to the comparative
@@ -125,7 +125,7 @@ The following is a list of all combinations of current conditions/modifiers
 `==!` | no | `=` | true if variable is equal to the comparative (inefficient)
 `!=!` | no | `=` | true if variable is qual to the comparative (inefficient)
 
-<variable> (m)>(m) <comparative> | should I use? | same as | rule
+`<variable> (m)>(m) <comparative>` | should I use? | same as | rule
 ---------------------------------|---------------|---------|-----
 `>` | yes | | true if variable is greater than the comparative
 `!>` | yes | | false if variable is greater than the comparative
@@ -136,7 +136,7 @@ The following is a list of all combinations of current conditions/modifiers
 `!>!` | no | `>` | true if variable is greater than the comparative (inefficient)
 `=>!` | no | `=` | true only if variable is equal to the comparative (inefficient)
 
-<variable> (m)<(m) <comparative> | should I use? | same as | rule
+`<variable> (m)<(m) <comparative>` | should I use? | same as | rule
 ---------------------------------|---------------|---------|-----
 `<` | yes | | true if variable is less than the comparative
 `!<` | yes | | false if variable is less than the comparative
@@ -147,7 +147,7 @@ The following is a list of all combinations of current conditions/modifiers
 `!<!` | no | `<` | true if variable is less than the comparative (inefficient)
 `=<!` | no | `=` | true only if variable is equal to the comparative (inefficient)
 
-<variable> is (m) null | should I use? | rule
+`<variable> is (m) null` | should I use? | rule
 -----------------------|---------------|-----
 `is null` | yes | true if variable is null
 `is not null` | yes | false if variable is null
