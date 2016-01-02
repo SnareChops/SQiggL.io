@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header">Query</div>
+    <div class="card-block">
+        <form (submit)="parse()">
+            <textarea rows="10" [(ngModel)]="query"></textarea>
+            <button type="submit" class="btn btn-primary pull-xs-none pull-sm-right">Parse</button>
+        </form>
+    </div>
+</div>

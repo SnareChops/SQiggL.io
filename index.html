@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/index.css"/>
         <script src="node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
         <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
         <script src="node_modules/systemjs/dist/system.js"></script>
         <script src="node_modules/rxjs/bundles/Rx.js"></script>
         <script src="node_modules/angular2/bundles/angular2.min.js"></script>
         <script src="node_modules/angular2/bundles/router.min.js"></script>
-        <!--<script src="node_modules/sqiggl/dist/browser.js"></script>-->
+        <script src="node_modules/sqiggl/dist/browser.js"></script>
     </head>
     <body>
-        <sqiggl-io></sqiggl-io>
+        <div class="container">
+            <sqiggl-io></sqiggl-io>
+        </div>
         <script src="startup.js"></script>
 	</body>
 </html>

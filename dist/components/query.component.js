@@ -9,26 +9,34 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var VariableSectionComponent;
+    var QueryComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            VariableSectionComponent = (function () {
-                function VariableSectionComponent() {
+            QueryComponent = (function () {
+                function QueryComponent() {
+                    this.querySubmitted = new core_1.EventEmitter();
                 }
-                VariableSectionComponent = __decorate([
+                QueryComponent.prototype.parse = function () {
+                    this.querySubmitted.emit(this.query);
+                };
+                __decorate([
+                    core_1.Output(), 
+                    __metadata('design:type', core_1.EventEmitter)
+                ], QueryComponent.prototype, "querySubmitted", void 0);
+                QueryComponent = __decorate([
                     core_1.Component({
-                        selector: 'variable-section',
+                        selector: 'query',
                         templateUrl: 'templates/query.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], VariableSectionComponent);
-                return VariableSectionComponent;
+                ], QueryComponent);
+                return QueryComponent;
             })();
-            exports_1("VariableSectionComponent", VariableSectionComponent);
+            exports_1("QueryComponent", QueryComponent);
         }
     }
 });

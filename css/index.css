@@ -1,0 +1,12 @@
+body{
+    margin-top:55px;
+}
+
+query textarea{
+    width: 100%;
+    font-family: monospace;
+}
+
+result p{
+    font-family:monospace;
+}
