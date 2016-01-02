@@ -1,21 +1,18 @@
 import {Component} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {CORE_DIRECTIVES} from 'angular2/common';
-import {ResultComponent} from './result.component';
-import {QueryComponent} from './query.component';
+import {PluginsComponent} from "./plugins.component";
+import {HomeComponent} from "./home.component";
 
 @Component({
     selector: 'sqiggl-io',
     templateUrl: 'templates/sqiggl.html',
-    directives: [QueryComponent, ResultComponent, CORE_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES]
 })
+@RouteConfig([
+    {path: '/', component: HomeComponent, as: 'Home', useAsDefault: true},
+    {path: '/plugins', component: PluginsComponent, as: 'Plugins'}
+])
 export class SQiggLComponent{
-    public result: string;
 
-    public parse(query: string){
-        try {
-            this.result = window['SQiggL'].parse(query);
-        } catch(error){
-            this.result = error.toString();
-        }
-    }
 }

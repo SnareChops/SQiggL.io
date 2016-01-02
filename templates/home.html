@@ -1,0 +1,43 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-2 inline">SQ<span class="sql-color">igg</span>L</h1>
+        <div class="col-sm-10 col-sm-offset-2"><span class="lead">SQL, with a squirt of lemon twist.</span>
+            <div class="lemon">
+                <div class="wedge wedge-1"></div>
+                <div class="wedge wedge-2"></div>
+                <div class="wedge wedge-3"></div>
+                <div class="peel"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    SQiggL is in active development to become the best SQL templating tool for DBAs and developers. While modern ORMs are very feature rich sometimes you just need raw SQL to run, but would like a tool that can help make those SQL files reusable and add some configuration options to them. SQiggL would like to become your preferred SQL templating tool to accomplish this goal. Some example use cases could be customizable SQL seed files for testing and DB setup, or dynamic query generation based on any rules in your application. In reality SQiggL could be used to template any type of text file, but uses SQL as it's main target audience.
+</p>
+<p>
+    SQiggL aims to provide a fully functional CLI with multiple file parsing abilities and a feature rich templating language that is both extensible and powerful. It will have a plugin API that can be used to add any features to the language and will allow for many supporting libraries to support it's core.
+</p>
+<p>
+    Many of these features are not yet available, but are all in active development. Contributions are more than welcome and encouraged. The source code is heavily documented and would be the best place to get started.
+</p>
+<div class="card">
+    <div class="card-header">Quick Help</div>
+    <div class="card-block">
+        <ul>
+            <li>SQiggL statements are wrapped in <pre>{ }</pre> and may have an additional character to tell the parser how to treat the statement <pre>{+ }</pre>, <pre>{% }</pre>, and <pre>{# }</pre> are examples.</li>
+            <li>Try using statements like <pre>{% if __ > __ }</pre> or <pre>{% unless __ !abc< __ }</pre>. These are called command statements and control whether the text between them and their respective <pre>{% endif }</pre> or <pre>{% endunless }</pre> is outputted in the final query.</li>
+            <li>You can inject text from a variable into a statement using <pre>{ }</pre>. For example <pre>WHERE ID = {myVar}</pre>.</li>
+            <li>To assign a value to a variable for use in a query use <pre>{+ }</pre> declaring the name of the variable, then a colon, then the value. Example: <pre>{+ myVar: 'Some value' }</pre>.</li>
+            <li>Comments can also be placed in SQiggL queries and by default are not outputted to the final SQL, this can be changed as a configuration option to SQiggL. Example: <pre>{# This is a comment}</pre></li>
+            <li>A full guide can be found at the <a href="https://github.com/SnareChops/SQiggL/blob/master/README.md">SQiggL repo's README</a>.</li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <query (querySubmitted)="parse($event)"></query>
+    </div>
+    <div class="col-sm-6">
+        <result [result]="result"></result>
+    </div>
+</div>

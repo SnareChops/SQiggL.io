@@ -1,9 +1,17 @@
 <div class="card">
-    <div class="card-header">Query</div>
+    <div class="card-header">Query (Run this example or try your own query here)</div>
     <div class="card-block">
         <form (submit)="parse()">
-            <textarea rows="10" [(ngModel)]="query"></textarea>
-            <button type="submit" class="btn btn-primary pull-xs-none pull-sm-right">Parse</button>
+            <textarea rows="10" [(ngModel)]="query">{+ env: 'Dev'}
+{+ fields: ['name', 'age', 'bday']}
+{# This uses an iterable expression}
+SELECT {var of fields using ','} FROM {env}Table;
+
+{# Conditionally include or exclude text}
+{% if env = 'Dev'}
+    UPDATE {env}Table SET RequestedAt = 'NOW()';
+{% endif}</textarea>
+            <button type="submit" class="btn btn-primary btn-block">Parse</button>
         </form>
     </div>
 </div>

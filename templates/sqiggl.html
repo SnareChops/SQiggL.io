@@ -1,15 +1,13 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+<nav class="navbar navbar-dark bg-primary">
     <ul class="nav navbar-nav">
         <li class="nav-item">
-            <a class="nav-link active">Home</a>
+            <a [routerLink]="['/Home']" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/Plugins']" class="nav-link">Plugins</a>
         </li>
     </ul>
 </nav>
-<div class="row">
-    <div class="col-sm-6">
-        <query (querySubmitted)="parse($event)"></query>
-    </div>
-    <div class="col-sm-6">
-        <result [result]="result"></result>
-    </div>
+<div class="container">
+    <router-outlet></router-outlet>
 </div>
